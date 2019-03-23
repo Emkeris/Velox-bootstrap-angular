@@ -1,0 +1,85 @@
+//Colors
+
+//Mixins
+@mixin cool-hover {
+  &::after {
+    content: '';
+    display: block;
+    width: 6%;
+    margin: 20px auto;
+    height: 4px;
+    background: #00A5FF;
+    transition: width 0.7s;
+  }
+
+  &:hover {
+    &::after{
+      width: 42.5%;
+      transition: width 0.7s;
+    }
+  }
+}
+
+//Base
+
+.container-fluid {
+  // height: 600px;
+  width: 100%;
+  background-color: #F5F6F8;
+
+  &:hover {
+
+    h2 {
+      &::after{
+        width: 75%;
+        transition: width 0.7s;
+      }
+    }
+  }
+
+  h2 {
+    &::after {
+      content: '';
+      display: block;
+      width: 6%;
+      margin: 20px auto;
+      height: 4px;
+      background: #00A5FF;
+      transition: width 0.7s;
+    }
+  }
+
+
+  .container {
+    text-align: center;
+    padding: 50px 0;
+
+    h2 {
+      display: block;
+      width: 100%;
+      font-size: 50px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 0;
+
+    }
+  }
+
+  .brands {
+    text-align: center;
+    margin: 0 auto;
+    padding:20px 20px 100px 20px;
+
+      img {
+        opacity: 0.5;
+        margin: 20px 30px;
+        transition: all .2s ease-in-out;
+
+        &:hover {
+          opacity: 1;
+          transform: scale(1.2)
+
+        }
+      }
+  }
+}

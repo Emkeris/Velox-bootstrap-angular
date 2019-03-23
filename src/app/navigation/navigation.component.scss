@@ -1,0 +1,75 @@
+// Colors
+
+// Mixins
+
+// Base
+
+header {
+  background-color: transparent;
+
+
+  .navbar {
+    padding: 10px 1rem;
+
+    button {
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+  // active burger
+  .menu {
+    display: inline-block;
+    position: absolute;
+    width: 56px;
+    margin-top: 10px;
+    left: 73.5%;
+    transform: translate(-50%, -50%);
+    font-size: 62px;
+    font-family:'Josefin Sans', sans-serif;
+    color: #fff;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      position: absolute;
+      transition: 0.4s ease;
+      opacity: 0;
+      pointer-events: none;
+    }
+    &:before {
+      content: "M \00a0 \00a0 \00a0 \00a0 \00a0U";
+      top: -60px;
+      left: -100%;
+      width: 215px;
+    }
+    &:after {
+      content: "N";
+      top: 50px;
+      left: 96%;
+    }
+    &:hover::before,
+    &:hover::after {
+      top: -4.3px;
+      opacity: 1;
+      transition: 0.2s ease, opacity 0.17s 0.03s ease-in;
+    }
+
+    .bar {
+      width: 80%;
+      height: 3px;
+      background: white;
+      margin: 0 auto 18px;
+      transition: transform 0.4s ease;
+    }
+  }
+}
+
+
+/*.menu:hover .bar {*/
+/*  transform: rotate(-10deg);*/
+/*}*/
+  // active burger
+
+}
