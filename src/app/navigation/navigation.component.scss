@@ -1,3 +1,5 @@
+
+
 // Colors
 
 // Mixins
@@ -16,16 +18,6 @@ header {
      .row {
       @include shadow();
       color: white;
-
-      // .collapseLeft{
-
-      //   h4, p {
-      //   }
-      // }
-
-      // .collapseRight{
-
-      // }
      }
   }
 
@@ -41,57 +33,70 @@ header {
     }
 
   // active burger
-  .menu {
-    display: inline-block;
-    position: absolute;
-    width: 56px;
-    margin-top: 10px;
-    left: 73.5%;
-    transform: translate(-50%, -50%);
-    font-size: 62px;
-    font-family:'Josefin Sans', sans-serif;
-    color: #fff;
-    cursor: pointer;
 
-    &::before,
-    &::after {
-      position: absolute;
-      transition: 0.4s ease;
-      opacity: 0;
-      pointer-events: none;
-    }
-    &:before {
-      content: "M \00a0 \00a0 \00a0 \00a0 \00a0U";
-      top: -60px;
-      left: -100%;
-      width: 215px;
-    }
-    &:after {
-      content: "N";
-      top: 50px;
-      left: 96%;
-    }
-    &:hover::before,
-    &:hover::after {
-      top: -4.3px;
-      opacity: 1;
-      transition: 0.2s ease, opacity 0.17s 0.03s ease-in;
-    }
 
-    .bar {
-      width: 80%;
-      height: 3px;
-      background: white;
-      margin: 0 auto 18px;
-      transition: transform 0.4s ease;
-    }
+}
+
+
+.wrapper{
+  position: absolute;
+  //overflow: hidden;
+  top: 50%;
+  right: 10%;
+  -webkit-transform: translate(-50%, -50%)
+}
+
+.btn{
+  // background-color: #f00;
+  // width: 100px;
+  height: 90px;
+}
+
+.bar1, .bar2, .bar3{
+	position: absolute;
+  top: 20px;
+  display: block;
+  font-size: 6px;
+  padding: 0;
+  -webkit-appearance: none;
+  //border: 2px solid;
+  color: #fff;
+  width: 60px;
+  height: 10px;
+  border-radius: 7px;
+  background-color: white;
+  -webkit-transition: all 0.2s ease-in;
+  -webkit-transform: rotate(0deg);
+}
+.bar2{
+	top:40px;
+}
+.bar3{
+	top:60px;
+}
+
+.bar1.active{
+	top:20px;
+  -webkit-transform: rotate(-135deg);
+  -webkit-transition: all 0.2s ease-in;
+}
+.bar2.active{
+	left:100px;
+  background-color: transparent;
+  -webkit-transition: all 0.2s ease-in;
+
+}
+.bar3.active{
+	top:30px;
+
+  -webkit-transform: rotate(135deg);
+  -webkit-transition: all 0.2s ease-in;
+}
+
+
+
+  // /active burger
+
+
   }
-}
 
-
-/*.menu:hover .bar {*/
-/*  transform: rotate(-10deg);*/
-/*}*/
-  // active burger
-
-}
