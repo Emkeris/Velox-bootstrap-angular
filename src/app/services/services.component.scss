@@ -57,10 +57,14 @@
   }
 
   h2 {
+    text-align: center;
+    display: block;
+    width: 100%;
     font-size: 50px;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
-    padding: 100px 100px 0 100px;
+    margin-bottom: 0;
+    padding-top: 100px;
 
     &::after {
       content: '';
@@ -156,7 +160,7 @@
       font-size: 50px;
       font-weight: 600;
       text-transform: uppercase;
-      padding: 100px 100px 0 100px;
+      padding-top: 100px;
 
       &::after {
         content: '';
@@ -178,7 +182,7 @@
     &:hover {
       h2 {
         &::after{
-          width: 45%;
+          width: 63%;
           transition: width 0.7s;
         }
       }
@@ -234,7 +238,7 @@
       font-size: 50px;
       font-weight: 600;
       text-transform: uppercase;
-      padding: 100px 100px 0 100px;
+      padding-top: 100px;
 
       &::after {
         content: '';
@@ -246,12 +250,9 @@
         transition: width 0.7s;
       }
     }
-  }
-}
 
-@media only screen and (max-width: 480px) {
-  h2 {
-    font-size: 30px;
-    padding: 0;
+    .card {
+      margin: 0;
+    }
   }
 }
