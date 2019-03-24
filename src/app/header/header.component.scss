@@ -8,14 +8,21 @@ $header-text: #fff;
 .container-fluid {
   background:linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(../../assets/img/header-background.jpg);
   background-size: cover;
-  background-position: center;
+  // background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
+  background-attachment: fixed;
+  min-height: 1100px;
+  // height: 100vh;
   width: 100%;
+
+
+
+
+
 
   .header-box{
     font-family:'Josefin Sans', sans-serif;
-    margin-top: 13%;
+    margin-top: 250px;
     color: $header-text;
 
     .display-2 {

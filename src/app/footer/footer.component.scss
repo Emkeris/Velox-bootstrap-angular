@@ -76,6 +76,10 @@
       font-size: 1.3rem;
       font-weight: 600;
 
+      &:focus {
+        box-shadow: none;
+      }
+
       i {
         margin-right: 5px;
       }

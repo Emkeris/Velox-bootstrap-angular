@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import Typed from 'typed.js';
+import Rellax from 'rellax';
 
 @Component({
   selector: 'app-header',
@@ -11,6 +12,8 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+    const rellax = new Rellax('.rellax');
 
     const options = {
       strings: ['Junior Front-End Developer.', 'Nerijus Turauskis'],

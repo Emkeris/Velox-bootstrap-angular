@@ -1,11 +1,33 @@
 // Colors
 
 // Mixins
+@mixin shadow {
+  text-shadow: 1px 1px 3px rgb(0, 0, 0);
+}
 
 // Base
 
 header {
   background-color: transparent;
+
+
+  .container {
+
+     .row {
+      @include shadow();
+      color: white;
+
+      // .collapseLeft{
+
+      //   h4, p {
+      //   }
+      // }
+
+      // .collapseRight{
+
+      // }
+     }
+  }
 
 
   .navbar {
